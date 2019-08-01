@@ -22,6 +22,7 @@ while cam.isOpened():
     # find contours on mask of "yellow-sheet" pixels
     _, contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL,
                                       cv2.CHAIN_APPROX_SIMPLE)
+    
     # now find the largest contour, this is most likely the sheet
     # for this we use the area of the contour
     if len(contours) > 0:
